@@ -15,7 +15,7 @@ musicLists.forEach(musicList => musicList.addEventListener('click', musicBtnHand
 
 //타이머 시간 조정
 let timer
-const startMinute = 0.1;
+const startMinute = 25;
 let time = 0;
 
 const countdown = document.querySelector('.countdown');
@@ -68,7 +68,7 @@ function hasClass() {
 
 
 let alertCount;
-const startCount = 0.1; //5
+const startCount = 5; //5
 let count = 0;
 
 const restTime = document.querySelector('.rest__time');
