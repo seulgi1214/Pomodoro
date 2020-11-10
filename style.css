@@ -1,0 +1,194 @@
+:root {
+    /* color */
+    --color-yellow: #f2b807;
+    --color-right-red: #d94f30;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    /* font-size */
+    --font-large: 4rem;
+    --font-medium: 3.5rem;
+    --font-regular: 2.5rem;
+    --font-small: 1.8rem;
+    --font-micro: 1.3rem;
+    /* font-weight */
+    --weight-bold: 900;
+    --weight-semi-bold: 700;
+    --weight-regular: 500;
+    --weight-thin: 400;
+    /* border-Radius */
+    --size-border-radius: 4px;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka One', cursive;
+    position: relative;
+    color: white;
+    background-color: #1f1f1f;
+}
+
+
+ button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#header {
+    padding-top: 2rem;
+}
+.header__title {
+    font-size: var(--font-large);
+    margin: 0 0 1rem 0;
+    cursor: pointer;
+}
+
+.header__text {
+    font-size: var(--font-small);
+    margin: 0;
+}
+
+.list__button {
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: .5rem 1rem;
+}
+
+#music {
+    padding: 0 3rem;
+}
+
+.music__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#music .list__button{
+    outline: none;
+    border: 3px solid transparent;
+    background-color: #eee;
+    cursor: pointer;
+    font-weight: var( --weight-regular);
+    border-radius: var(--size-border-radius);
+    transition: .3s;
+    width: 120px;
+}
+
+#music .list__button:hover {
+    transform: scale(1.1);
+}
+
+#music .list__button:first-child {  
+    margin-left: 0rem;
+}
+
+#music .active {
+    background-color: #f1c40f;
+    color: white;
+}
+
+#timeSet {
+    color: #f1c40f;
+    margin-top: 1rem;
+    font-size: var(--font-small);
+}
+
+
+#music, #timer, #control {
+    margin: 1rem 0;
+}
+
+#timer {
+    font-size: var(--font-medium);
+}
+
+#control i{
+    font-size: var(--font-regular);
+}
+
+#control button{
+    color: white;
+    background-color: transparent;
+    margin-left: 1.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#control button:hover{
+transform: scale(1.1);
+}
+
+#control button:first-child{
+    margin-left: 0rem;
+}
+#images {
+    margin-top: 2rem;
+}
+
+#images img {
+    width: 75%;
+    height: auto;
+}
+
+#alert {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: tomato;
+    width: 350px;
+    height: 250px;
+    padding: 2rem 2rem 1rem 2rem;
+    border-radius: var(--size-border-radius);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+#alert.open {
+    display: block;
+}
+
+#alert p {
+    font-size: var(--font-micro);
+    letter-spacing: 1px;
+    font-weight: var(--weight-semi-bold);
+    margin: 0 0 1rem 0;
+}
+
+.rest__time {
+    display: block;
+    font-size: var(--font-regular);
+    font-family: 'Fredoka One', cursive;
+}
+
+
+#alert button {
+    width: 140px;
+    margin-top: 1rem;
+    padding: .5rem;
+    border-radius: var(--size-border-radius);
+}
+
+@media screen and (max-width: 535px) { 
+    #music .list__button {
+        margin-top: 1rem;
+   }
+   #timeSet {
+       font-size: var(--font-small);
+   }
+}

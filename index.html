@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="/scripts/script.js" defer></script>
+    <title>Pomodoro</title>
+</head>
+
+<body>
+    <div class="container">
+        <header id="header">
+            <h1 class="header__title" onclick="window.location.reload()">Pomodoro</h1>
+            <p class="header__text">✍let's start coding!</p>
+        </header>
+        <section id="music">
+            <div class="music__list">
+                <button class="list__button" data-id="0" onclick="document.querySelector('#images img').src='/images/fire.jpg'" )">장작타는소리</button>
+                <button class="list__button" data-id="1" onclick="document.querySelector('#images img').src='/images/rain.jpg'" )">비오는 소리</button>
+                <button class="list__button" data-id="2" onclick="document.querySelector('#images img').src='/images/wave.jpg'" )">파도 소리</button>
+                <button class="list__button" data-id="3" onclick="document.querySelector('#images img').src='/images/cafe.jpg'" )">카페 소리</button>
+            </div>
+        </section>
+        <section id="timeSet">
+            <span class="timeSet__text">25 WORK HARD / 5 REST</span>
+        </section>
+        <section id="timer">
+            <span class="countdown">00&nbsp;:&nbsp;00</span>
+        </section>
+        <section id="control">
+            <button class="control_button play"><i class="fas fa-play"></i></button>
+            <button class="control_button pause"><i class="fas fa-pause"></i></button>
+            <button class="control_button stop" onclick="window.location.reload()"><i class="fas fa-stop"></i></button>
+        </section>
+        <section id="images">
+            <img class="image" alt="">
+        </section>
+        <section id="alert">
+            <p>끝!😉 쉬는시간이에요.<br>5분 후에 다시 시작돼요!</p>
+            <div class="alert__button">
+                <!-- <button type="button" class="alert__button-positive">네🔥</button> -->
+                <span class="rest__time">00&nbsp;:&nbsp;00</span>
+                <button type="button" onclick="window.location.reload()">이제 그만할래요🤚</button>
+            </div>
+
+        </section>
+    </div>
+
+    <audio src="/sounds/fireplace.flac"></audio>
+    <audio src="/sounds/rain.wav"></audio>
+    <audio src="/sounds/wave.mp3"></audio>
+    <audio src="/sounds/cafe.wav"></audio>
+</body>
+
+</html>
