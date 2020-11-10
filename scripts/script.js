@@ -15,16 +15,14 @@ musicLists.forEach(musicList => musicList.addEventListener('click', musicBtnHand
 
 //타이머 시간 조정
 let timer
-const startMinute = 25;
+const startMinute = 25; //25
 let time = 0;
 
 const countdown = document.querySelector('.countdown');
 
 //1초 마다 함수실행
 function timerHandler() {
-    // 0
     time = startMinute * 60;
-    // 값이 있음    
     timer = setInterval(updateCountdown, 1000);
 }
 
@@ -110,17 +108,17 @@ function playHandler() {
     }
     const musicPlay = id;
     audio[musicPlay].play();
+    audio[musicPlay].currentTime = 0;
+    audio[musicPlay].loop = true;
     timerHandler();
 }
-//여기
+
 playBtn.addEventListener('click', playHandler);
 
 //멈춤
 function StopHandler() {
     const musicStop = id;
     audio[musicStop].pause();
-    audio[musicStop].currentTime = 0;
-    loop = true;
     clearInterval(timer);
 }
 
