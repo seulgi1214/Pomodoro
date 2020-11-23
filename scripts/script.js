@@ -14,16 +14,24 @@ musicLists.forEach(musicList => musicList.addEventListener('click', musicBtnHand
 
 
 //타이머 시간 조정
-let timer
+let timer;
+let pauseChk = false;
 const startMinute = 25; //25
 let time = 0;
+
 
 const countdown = document.querySelector('.countdown');
 
 //1초 마다 함수실행
 function timerHandler() {
-    time = startMinute * 60;
+    if (pauseChk) {
+        pauseChk = false;
+    } else {
+        time = startMinute * 60;
+    }
+
     timer = setInterval(updateCountdown, 1000);
+
 }
 
 
@@ -102,7 +110,9 @@ function updateAlertCount() {
 const playBtn = document.querySelector('.play');
 
 function playHandler() {
-    if (time != 0) {
+    if (pauseChk) {
+
+    } else if (time != 0) {
         alert('timer가 동작중입니다.');
         return
     }
@@ -117,9 +127,11 @@ playBtn.addEventListener('click', playHandler);
 
 //멈춤
 function StopHandler() {
+    pauseChk = true;
     const musicStop = id;
     audio[musicStop].pause();
     clearInterval(timer);
+
 }
 
 const pauseBtn = document.querySelector('.pause');
